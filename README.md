@@ -26,8 +26,10 @@ There are more playlists that I will check out next (or maybe sooner), but of co
 
 Get a binary number as input (ex: `1001`) and print the decimal value (ex: `9`).
 
-File: [0001_binary_conversion.c](files/0001_binary_conversion.c)
+File: [binary_conversion.c](files/0001_binary_conversion.c)
 
+
+## Void pointer
 
 
 
