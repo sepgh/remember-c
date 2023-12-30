@@ -26,11 +26,15 @@ There are more playlists that I will check out next (or maybe sooner), but of co
 
 Get a binary number as input (ex: `1001`) and print the decimal value (ex: `9`).
 
-File: [binary_conversion.c](files/0001_binary_conversion.c)
+File: [binary_conversion.c](files/binary_conversion.c)
 
 
 ## Void pointer
 
+Imagine we have a function that takes in "an int array" and "int of length of the array" to represent eatch array element in hex format. How can we modify this function to accept other types like `long long` or `short` instead of only `int array`.
 
+Video: https://www.youtube.com/watch?v=k3DbBOZRvRs
+
+File: [void_pointers.c](files/void_pointers.c)
 
 
