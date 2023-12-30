@@ -28,6 +28,8 @@ Get a binary number as input (ex: `1001`) and print the decimal value (ex: `9`).
 
 File: [binary_conversion.c](files/binary_conversion.c)
 
+[Hex to decimal](https://www.youtube.com/watch?v=pg-HEGBpCQk)
+
 
 ## Void pointer
 
