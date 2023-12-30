@@ -37,4 +37,11 @@ Video: https://www.youtube.com/watch?v=k3DbBOZRvRs
 
 File: [void_pointers.c](files/void_pointers.c)
 
+Important note:  if you convert int array to char array (for example), the conversion is a byte conversion. An int is 4 bytes while a char is 1 byte. So if `int_arr[0]` is `64`, the converted `char_arr` will have `char_arr[0], char_arr[1], char_arr[2], char_arr[3]` to hold all of the values, and in this case only `char_arr[0]` will have a value.
+
+Thats why in the above file if we want to present hexadeimal of an integer, we use `%08x` since each byte requires 2 hexadecimal spaces to be shown and we have 4 bytes. But after we convert the `int` or `long long` array to `char` array (through accepting it using `void*`) then to represent char array using hexadecimal we use `%02` since a char is single byte.
+
+File: [void_pointers_2.c](files/void_pointers_2.c)
+
+
 
