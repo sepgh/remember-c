@@ -41,6 +41,12 @@ Video: https://www.youtube.com/watch?v=gTXRfETK3z4
 
 File: [string_1.c](files/string_1.c)  (misses `malloc` implementation cause I havent yet learned that completely :D)
 
+### String Array Declerations
+
+Video: https://www.youtube.com/watch?v=ly66E_LGubk
+
+File: [string_2.c](files/string_2.c) 
+
 
 ## Void pointer
 
