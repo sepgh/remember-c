@@ -31,6 +31,17 @@ File: [binary_conversion.c](files/binary_conversion.c)
 [Hex to decimal](https://www.youtube.com/watch?v=pg-HEGBpCQk)
 
 
+## Strings
+
+### Decleration
+
+By using `char[]` we can later manipulate the characters of a string. But if we use `char*` the behaviour would be undetermined by C if we want to change it later (Segmentation fault). Another solution is to use `malloc` to use pointer.
+
+Video: https://www.youtube.com/watch?v=gTXRfETK3z4
+
+File: [string_1.c](files/string_1.c)  (misses `malloc` implementation cause I havent yet learned that completely :D)
+
+
 ## Void pointer
 
 Imagine we have a function that takes in "an int array" and "int of length of the array" to represent eatch array element in hex format. How can we modify this function to accept other types like `long long` or `short` instead of only `int array`.
@@ -54,6 +65,8 @@ Functions (all work on arrays):
 - `memcp`: memory copy
 - `memset`: set value in memory
 - `memchr`: find byte in memory
+
+Video: https://www.youtube.com/watch?v=ypG9W33LOTk
 
 Files: [memory_manipulation.c](files/memory_manipulation.c)  [memory_manipulation_2.c](files/memory_manipulation_2.c)  [memory_manipulation_3.c](files/memory_manipulation_3.c)  [memory_manipulation_4.c](files/memory_manipulation_4.c) 
 
