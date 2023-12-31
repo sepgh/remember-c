@@ -46,4 +46,16 @@ Thats why in the above file if we want to present hexadeimal of an integer, we u
 File: [void_pointers_2.c](files/void_pointers_2.c)
 
 
+## Memory manipulation
+
+Functions (all work on arrays):
+
+- `memcmp`: memory comparing
+- `memcp`: memory copy
+- `memset`: set value in memory
+- `memchr`: find byte in memory
+
+Files: [memory_manipulation.c](files/memory_manipulation.c)  [memory_manipulation_2.c](files/memory_manipulation_2.c)  [memory_manipulation_3.c](files/memory_manipulation_3.c)  [memory_manipulation_4.c](files/memory_manipulation_4.c) 
+
+
 
