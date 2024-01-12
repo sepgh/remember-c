@@ -59,6 +59,16 @@ Additinally it helps to copy strings in safe way. Basically, using `strncpy` we 
 Video: https://www.youtube.com/watch?v=R5Xk5N9-rno
 File: [string_3.c](files/string_3.c)
 
+
+### Pointer assignment vs strcpy 
+
+If we assign value to a pointer (char pointer) - which had initial value using `malloc`- inside a function, the memory it's refering to will be deallocated after function exits, which means we can no longer get that value outside the function (in the example file, we can no longer print `str` in main function if we have used `str=example` in `process` function).
+
+
+Video: https://www.youtube.com/watch?v=VQHK2EZZHb8
+File: [string_4.c](files/string_3.c)
+
+
 ## Void pointer
 
 Imagine we have a function that takes in "an int array" and "int of length of the array" to represent eatch array element in hex format. How can we modify this function to accept other types like `long long` or `short` instead of only `int array`.
