@@ -95,6 +95,15 @@ Video: https://www.youtube.com/watch?v=A8IkGIqZoLQ
 File: [string_7.c](files/string_7.c)
 
 
+### Splitting strings
+
+Intro to `strtok` (String token). Importance:
+This function returns a char* to next occurrence of each piece. Also modifies the input (str) and adds "String terminator character" at each piece.
+
+Video: https://www.youtube.com/watch?v=34DnZ2ewyZo
+File: [string_8.c](files/string_8.c)
+
+
 ## Void pointer
 
 Imagine we have a function that takes in "an int array" and "int of length of the array" to represent eatch array element in hex format. How can we modify this function to accept other types like `long long` or `short` instead of only `int array`.
