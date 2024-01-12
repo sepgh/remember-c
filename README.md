@@ -66,7 +66,17 @@ If we assign value to a pointer (char pointer) - which had initial value using `
 
 
 Video: https://www.youtube.com/watch?v=VQHK2EZZHb8
-File: [string_4.c](files/string_3.c)
+File: [string_4.c](files/string_4.c)
+
+
+### Comparing strings
+
+Intro to `strcpy` and `strncpy`. Additionally you can use `memcmp`.
+
+
+https://www.youtube.com/watch?v=Y4OABXkRSEA
+File: [string_5.c](files/string_5.c)
+
 
 
 ## Void pointer
