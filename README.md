@@ -48,6 +48,17 @@ Video: https://www.youtube.com/watch?v=ly66E_LGubk
 File: [string_2.c](files/string_2.c) 
 
 
+### String copy
+
+Functions used: `strcpy` and `strncpy`
+
+Importance of the video: getting length of a string, having the `\0` at end of strings and what happens if we don't pay attention to that.
+
+Additinally it helps to copy strings in safe way. Basically, using `strncpy` we can pass `length of the string + 1` (`strlen(x) + 1`) to always assure that we allocate enough memory to the string we are copying into. Alternatively, we could always set last item of char array (string) to `\0` for assurance.
+
+Video: https://www.youtube.com/watch?v=R5Xk5N9-rno
+File: [string_3.c](files/string_3.c)
+
 ## Void pointer
 
 Imagine we have a function that takes in "an int array" and "int of length of the array" to represent eatch array element in hex format. How can we modify this function to accept other types like `long long` or `short` instead of only `int array`.
