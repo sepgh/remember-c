@@ -74,7 +74,7 @@ File: [string_4.c](files/string_4.c)
 Intro to `strcpy` and `strncpy`. Additionally you can use `memcmp`.
 
 
-https://www.youtube.com/watch?v=Y4OABXkRSEA
+Video: https://www.youtube.com/watch?v=Y4OABXkRSEA
 File: [string_5.c](files/string_5.c)
 
 
@@ -83,10 +83,16 @@ File: [string_5.c](files/string_5.c)
 Intro to `strchr` and `strrchr`. Additionally explains how to get the position of found character.
 
 
-https://www.youtube.com/watch?v=SLUEfPKR91U
+Video: https://www.youtube.com/watch?v=SLUEfPKR91U
 File: [string_6.c](files/string_6.c)
 
 
+### Return a string from a function
+
+The best way to do so is to allocate the memory of the string we "expect to be returned" before calling the function and pass the memory of that string to the function so it fills it.
+
+Video: https://www.youtube.com/watch?v=A8IkGIqZoLQ
+File: [string_7.c](files/string_7.c)
 
 
 ## Void pointer
