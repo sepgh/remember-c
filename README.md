@@ -78,6 +78,16 @@ https://www.youtube.com/watch?v=Y4OABXkRSEA
 File: [string_5.c](files/string_5.c)
 
 
+### Finding a character in a string (checking if character exists)
+
+Intro to `strchr` and `strrchr`. Additionally explains how to get the position of found character.
+
+
+https://www.youtube.com/watch?v=SLUEfPKR91U
+File: [string_6.c](files/string_6.c)
+
+
+
 
 ## Void pointer
 
