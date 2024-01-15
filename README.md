@@ -87,6 +87,15 @@ Video: https://www.youtube.com/watch?v=SLUEfPKR91U
 File: [string_6.c](files/string_6.c)
 
 
+### Finding words in a sentence
+
+Intro do `strstr`.
+
+Video: https://www.youtube.com/watch?v=8A3Zycio0W4
+File: [string_10.c](files/string_10.c)
+
+
+
 ### Return a string from a function
 
 The best way to do so is to allocate the memory of the string we "expect to be returned" before calling the function and pass the memory of that string to the function so it fills it.
