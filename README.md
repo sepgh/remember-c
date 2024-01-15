@@ -143,11 +143,13 @@ Video: https://www.youtube.com/watch?v=L8hVbPIVE0U
 Source:
 
 ```c
-char str[] = "200, 22, 111 ";
+//char str[] = "200, 22, 111 ";
+char str[] = "200, 0xf ";
 char* cursor = str;
 long int sum = 0;
 while (cursor != str + strlen(str)) {
-    long int x = strtol(cursor, &cursor, 10);
+    // long int x = strtol(cursor, &cursor, 10);
+    long int x = strtol(cursor, &cursor, 0);
     while (*cursor == ' ' || *cursor == ',') {
         cursor++;
     }
