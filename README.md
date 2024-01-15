@@ -104,6 +104,15 @@ Video: https://www.youtube.com/watch?v=34DnZ2ewyZo
 File: [string_8.c](files/string_8.c)
 
 
+### String parsing
+
+Intro to `sscanf` (different from `scanf`).
+
+Video: https://www.youtube.com/watch?v=-7cSmcdMryo
+File: [string_9.c](files/string_9.c)
+
+Additional note: `scanf` is a family of functions in C that not only work from standard input from keyboard, it works with strings and files.
+
 ## Void pointer
 
 Imagine we have a function that takes in "an int array" and "int of length of the array" to represent eatch array element in hex format. How can we modify this function to accept other types like `long long` or `short` instead of only `int array`.
