@@ -106,7 +106,7 @@ File: [string_8.c](files/string_8.c)
 
 ### String parsing
 
-Intro to `sscanf` (different from `scanf`).
+Intro to `sscanf` (different from `scanf`). Scans a string.
 
 Video: https://www.youtube.com/watch?v=-7cSmcdMryo
 File: [string_9.c](files/string_9.c)
@@ -114,6 +114,8 @@ File: [string_9.c](files/string_9.c)
 Additional note: `scanf` is a family of functions in C that not only work from standard input from keyboard, it works with strings and files.
 
 Additional note: `%s` reads anything until `\n`, `space` or a tab. So we can't use `%s` (format specifier) for some cases in `sscanf`. Instead we can do something like `%[a-zA-Z ]` for example. If we want to read anything we can use `%[^]`.
+
+Same thing works with `scanf`, so `sscanf` is for scanning and parsing strings, and you could use `fscanf` to do the same with files and pass a "file handle".
 
 ## Void pointer
 
