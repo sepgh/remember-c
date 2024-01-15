@@ -137,6 +137,25 @@ Video: https://www.youtube.com/watch?v=UQ5INK_pXCI
 File: [string_11.c](files/string_11.c)
 
 
+### Parsing a string of numbers
+
+Video: https://www.youtube.com/watch?v=L8hVbPIVE0U
+Source:
+
+```c
+char str[] = "200, 22, 111 ";
+char* cursor = str;
+long int sum = 0;
+while (cursor != str + strlen(str)) {
+    long int x = strtol(cursor, &cursor, 10);
+    while (*cursor == ' ' || *cursor == ',') {
+        cursor++;
+    }
+    sum += x;
+}
+printf("Sum is %ld\n", sum);
+```
+
 
 ## Void pointer
 
