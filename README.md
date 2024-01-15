@@ -126,6 +126,18 @@ Additional note: `%s` reads anything until `\n`, `space` or a tab. So we can't u
 
 Same thing works with `scanf`, so `sscanf` is for scanning and parsing strings, and you could use `fscanf` to do the same with files and pass a "file handle".
 
+
+### String to number
+
+Intro to `strtol` and `strtof`. Read like `str  to  L` (long) or `str  to  F` (float). They return a number, but takes more parameters. Second parameter takes a pointer to set it to where it stopped reading the number. Third parameter is the base we want to read the number in.
+
+Also, `atoi` is introduced, which is not the right way to do because: A) has undefined behavior if you try to convert a string larger than expected. B) Doesn't tell you when it stopped converting a number. C) Can't convert numbers from other bases (like base 16).
+
+Video: https://www.youtube.com/watch?v=UQ5INK_pXCI
+File: [string_11.c](files/string_11.c)
+
+
+
 ## Void pointer
 
 Imagine we have a function that takes in "an int array" and "int of length of the array" to represent eatch array element in hex format. How can we modify this function to accept other types like `long long` or `short` instead of only `int array`.
