@@ -13,7 +13,7 @@ int main(int argc, char* argv[]) {
         printf("The word has been found at position %d\n", res - str);
     } else {
         printf("%p\n", res);
-        printf("The word has NOT been found\n",);
+        printf("The word has NOT been found\n");
     }
     
     return 0;
