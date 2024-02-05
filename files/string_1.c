@@ -16,7 +16,15 @@ int main(int argc, char *args[]){
 	printf("%s \n", str2);
 	
 	// BUT CANT MODIFY LIKE BEFORE, BELOW LINE WILL GET SEGMENTATION FAULT
-	str2[0] = 'h';
+	// str2[0] = 'h';
+
+	// With malloc
+	
+	char* str3 = malloc(50 * sizeof(char));
+	strcpy(str3, "Hello!");
+
+	printf("%s \n", str3);
+	
 
 	return 0;
 }

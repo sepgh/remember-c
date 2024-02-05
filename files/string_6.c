@@ -13,7 +13,7 @@ int main(int argc, char *args[]){
 	// strrchr works in reverse and looks from last to first
 	char *result = strrchr(str, 'e');
 
-
+	printf("Pos str: %d, Pos result: %d \n", str, result);
 	// string char
 	if (result){
 		printf("Character was found \n");
