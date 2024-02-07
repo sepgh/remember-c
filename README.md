@@ -82,6 +82,8 @@ File: [string_5.c](files/string_5.c)
 
 Intro to `strchr` and `strrchr`. Additionally explains how to get the position of found character.
 
+**Fun point!** Both of these functions return pointer of the found character, and since a string is a "contiguous" array of characters, subtracting these pointer addresses will return you the position of which the character was found in a string.
+
 
 Video: https://www.youtube.com/watch?v=SLUEfPKR91U
 File: [string_6.c](files/string_6.c)
@@ -138,6 +140,8 @@ File: [string_11.c](files/string_11.c)
 
 
 ### Parsing a string of numbers
+
+Intro to `strtol`, which takes out numbers (long int) from a string. It takes the string, the pointer of the string we are in, and the base we read the number in. If you use `0` as base it detects base-16 itself.
 
 Video: https://www.youtube.com/watch?v=L8hVbPIVE0U
 Source:
