@@ -162,6 +162,58 @@ while (cursor != str + strlen(str)) {
 printf("Sum is %ld\n", sum);
 ```
 
+## Arrays
+
+### Iterating over an array using pointers
+
+If we declare a pointer to the first element of an array (Example:  `int* p = &arr[0]`), we can access the value using `*p`. But also, if we increment the pointer by the `sizeof` the array type (in this example, `int` which is 4 bytes) then we can get the next item in the array.
+
+Video: https://code-vault.net/course/ar67avx6hk:1610029043923/lesson/qjp3te6iyf:1603733521836
+
+
+### Iterating main parts of a matrix
+
+Video: https://code-vault.net/course/ar67avx6hk:1610029043923/lesson/rrpv5yuflb:1603733521478
+
+
+### Returning an array from a function
+
+An array which is declared within a function can not be returnes since the memory is in the stack and is removed when the function exits. The right way to do it is either accept the array address as input, return void, and manipulate the array in the function, or use `malloc` and return the address of the array which then will require a call to `free` whenever the function is called.  This is the same practice from __Strings: Pointer assignment vs strcpy__ section.
+
+Video: https://code-vault.net/course/ar67avx6hk:1610029043923/lesson/iyvrv54u8e:1603733520962
+
+
+### Difference between arrays and pointers
+
+Video: https://www.youtube.com/watch?v=iSZLE9qPN14
+
+
+### Dynamically allocated arrays
+
+Intro to `calloc`. From man page:
+
+> The calloc() function allocates memory for an array of nmemb elements of size bytes each and returns a pointer to the allocated memory.  The memory is set to zero.  If nmemb or size is 0, then calloc() returns either NULL, or a unique pointer value that can later be successfully passed to free().  If the multiplication of nmemb and size would result in integer overflow,  then  calloc()  returns an error.  By contrast, an integer overflow would not be detected in the following call to malloc(), with the result that an incorrectly sized block of memory would be allocated:
+>
+>           malloc(nmemb * size);
+
+If calloc returns NULL it means it failed to allocate the memory (maybe no memory was left for example). We can gracefully handle the error. Same principle applies to realloc (read below).
+
+Intro to `size_t`:
+
+> size_t is a special unsigned integer type defined in the standard library of C and C++ languages. It is the type of the result returned by the sizeof and alignof operators. The size_t is chosen so that it can store the maximum size of a theoretically possible array or an object.
+
+Intro to `realloc`, which gets a pointer and allocates a chunk of memory to it again. It may return a new pointer, since it may not just simply be able to expand the memory and have to move it.
+
+
+video: https://www.youtube.com/watch?v=6Ir4l0VuI7Y
+
+
+### The address of an array
+
+Most important lesson: Arrays decay to a pointer whenever they are passed to a function.
+
+Videos: https://www.youtube.com/watch?v=ToPkRyNOBZ8 | https://www.youtube.com/watch?v=pBPrWFhVNL4
+
 
 ## Void pointer
 
