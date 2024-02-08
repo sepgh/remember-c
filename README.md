@@ -293,6 +293,14 @@ int main(int argc, char* argv[]) {
 Video: https://www.youtube.com/watch?v=XreVazVRQEI
 
 
+### Static
+
+The `static` keyword makes variables be treated specially: To be initialized when program starts, and during execution don't reinitialize it, therefore it's value and state doesn't refresh when stack of a function is cleaned. **This is not a global variable though. They are accessible only in their own scope.**
+
+Video: https://www.youtube.com/watch?v=OngGUoENgWo
+File: [data_type_2.c](files/data_type_2.c)
+
+
 ## Memory manipulation
 
 Functions (all work on arrays):
