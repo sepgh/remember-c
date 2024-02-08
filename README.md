@@ -250,6 +250,16 @@ Video: https://www.youtube.com/watch?v=ewBBRaF0oEA
 File: [function_1.c](files/function_1.c)
 
 
+## Data types
+
+### typedef
+
+Using `typedef` you can define a name for a data type. It can be a data type you create (like struct) or even built in types.
+
+Video: https://www.youtube.com/watch?v=9guJVmDyFmE
+File: 
+
+
 ## Memory manipulation
 
 Functions (all work on arrays):
