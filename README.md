@@ -205,7 +205,13 @@ Intro to `size_t`:
 Intro to `realloc`, which gets a pointer and allocates a chunk of memory to it again. It may return a new pointer, since it may not just simply be able to expand the memory and have to move it.
 
 
-video: https://www.youtube.com/watch?v=6Ir4l0VuI7Y
+Video: https://www.youtube.com/watch?v=6Ir4l0VuI7Y
+
+
+**Bonus**: Dynamically allocated multi-dimensional arrays!
+
+Video: https://www.youtube.com/watch?v=-y8FUvRq_88
+File: [array_1.c](files/array_1.c)
 
 
 ### The address of an array
