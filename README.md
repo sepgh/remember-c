@@ -257,7 +257,30 @@ File: [function_1.c](files/function_1.c)
 Using `typedef` you can define a name for a data type. It can be a data type you create (like struct) or even built in types.
 
 Video: https://www.youtube.com/watch?v=9guJVmDyFmE
-File: 
+File: [data_type_1.c](files/data_type_1.c)
+
+
+### Defining a data type (struct)
+
+Example:
+
+```c
+typedef struct Point {
+    double x;
+    double y;
+} Point;
+
+int main(int argc, char* argv[]) {
+    Point p = {
+        .x = 0.25,
+        .y = 0.78
+    };
+    
+    printf("%lf %lf\n", p.x, p.y);
+    
+    return 0;
+}
+```
 
 
 ## Memory manipulation
