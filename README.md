@@ -19,6 +19,7 @@ There are more playlists that I will check out next (or maybe sooner), but of co
 - https://www.youtube.com/playlist?list=PLLh1tBHv1CiVpzohtrp7YCSpY9wlJxCQs
 - [Stanford University - C programming](https://www.youtube.com/playlist?list=PLjn3WmBeabPOUzxcCkzk4jYMGRZMZ6ylF)
 
+---
 
 ## Content
 
@@ -281,6 +282,15 @@ int main(int argc, char* argv[]) {
     return 0;
 }
 ```
+
+### Return and pass a struct to a function
+
+1. Passing struct to a function is pass-by-value (copy), which is not optimized.
+2. As solution for 1, arguments can accept pointers to the structs.  `void x(Point* p)`
+3. To prevent modification, arguments can also be set as `const`.  `void x(const Point* p)`
+4. Accessing struct attributes when passed as a pointer needs `->` instead of `.`. So: `p->x` over `p.x`.
+
+Video: https://www.youtube.com/watch?v=XreVazVRQEI
 
 
 ## Memory manipulation
