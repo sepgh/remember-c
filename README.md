@@ -221,6 +221,12 @@ Most important lesson: Arrays decay to a pointer whenever they are passed to a f
 Videos: https://www.youtube.com/watch?v=ToPkRyNOBZ8 | https://www.youtube.com/watch?v=pBPrWFhVNL4
 
 
+### Passing arrays to a function (tricky with multidimensional arrays)
+
+Video: https://www.youtube.com/watch?v=Cfm4D_Mxpiw
+File: [array_2.c](files/array_2.c)
+
+
 ## Void pointer
 
 Imagine we have a function that takes in "an int array" and "int of length of the array" to represent eatch array element in hex format. How can we modify this function to accept other types like `long long` or `short` instead of only `int array`.
