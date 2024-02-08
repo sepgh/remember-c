@@ -242,6 +242,14 @@ Thats why in the above file if we want to present hexadeimal of an integer, we u
 File: [void_pointers_2.c](files/void_pointers_2.c)
 
 
+## Functions
+
+### Func Pointers
+
+Video: https://www.youtube.com/watch?v=ewBBRaF0oEA
+File: [function_1.c](files/function_1.c)
+
+
 ## Memory manipulation
 
 Functions (all work on arrays):
