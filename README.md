@@ -309,6 +309,12 @@ Video: https://www.youtube.com/watch?v=BFDUeEVxUok
 File: [data_type_3.c](files/data_type_3.c)
 
 
+#### Bonus (Anonymous Unions)
+
+Video: https://www.youtube.com/watch?v=ICbLwg0Pgz0
+File: [data_type_4.c](files/data_type_4.c)
+
+
 ## Memory manipulation
 
 Functions (all work on arrays):
