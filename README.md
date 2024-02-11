@@ -324,6 +324,13 @@ And when we are trying to assign a smaller variable a larger amount in size, we 
 Video: https://www.youtube.com/watch?v=am183PVCn7U
 
 
+### Enum
+
+In C, the enum can only store signed int values. The int value of each enum element will be "last value + 1" if not defined, and if no elements have any value first one begins with 0.
+
+Video: https://www.youtube.com/watch?v=lWzZ2l5n81c
+
+
 ## Memory manipulation
 
 Functions (all work on arrays):
