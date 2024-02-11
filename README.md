@@ -337,6 +337,13 @@ Video: https://www.youtube.com/watch?v=JNu_9U4qq8E
 File: [data_type_5.c](files/data_type_5.c)
 
 
+### Infinite loop through integer overflow
+
+If for optimizing loop index we choose a type which may overflow or underflow during the loop then we will enter an infinite loop.
+
+Video: https://www.youtube.com/watch?v=uZf_5JQXoU8
+
+
 ## Memory manipulation
 
 Functions (all work on arrays):
