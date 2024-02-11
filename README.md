@@ -301,6 +301,14 @@ Video: https://www.youtube.com/watch?v=OngGUoENgWo
 File: [data_type_2.c](files/data_type_2.c)
 
 
+### Union
+
+Inside a Union all the members share the exact same memory. It's a simple way to interprete exact same memory in different ways.
+
+Video: https://www.youtube.com/watch?v=BFDUeEVxUok
+File: [data_type_3.c](files/data_type_3.c)
+
+
 ## Memory manipulation
 
 Functions (all work on arrays):
