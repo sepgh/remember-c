@@ -315,6 +315,15 @@ Video: https://www.youtube.com/watch?v=ICbLwg0Pgz0
 File: [data_type_4.c](files/data_type_4.c)
 
 
+### Integer type conversion
+
+
+When we are __extending__ the variables we take the 'sign bit' and copy it into everywhere we have to pad the larger variable. 
+And when we are trying to assign a smaller variable a larger amount in size, we actually trim the first least significant bytes from the larger value.
+
+Video: https://www.youtube.com/watch?v=am183PVCn7U
+
+
 ## Memory manipulation
 
 Functions (all work on arrays):
