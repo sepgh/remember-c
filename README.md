@@ -21,7 +21,7 @@ There are more playlists that I will check out next (or maybe sooner), but of co
 
 ---
 
-## Content
+## Custom Content
 
 ### Decimal representation of a binary number
 
@@ -30,6 +30,11 @@ Get a binary number as input (ex: `1001`) and print the decimal value (ex: `9`).
 File: [binary_conversion.c](files/binary_conversion.c)
 
 [Hex to decimal](https://www.youtube.com/watch?v=pg-HEGBpCQk)
+
+
+### Macros
+
+Video: https://www.youtube.com/watch?v=JqN4uVgCTWE
 
 
 ## Strings
