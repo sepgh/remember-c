@@ -350,6 +350,12 @@ Video: https://www.youtube.com/watch?v=uZf_5JQXoU8
 
 (Checkout 'Void pointer' section first)
 
+There is actually no "Generic type" like in OOP languages. It's all about using `malloc` within a struct that keeps the type as an enum.
+
+
+Video: https://www.youtube.com/watch?v=RG7D2_pay0U
+File: [data_type_6.c](files/data_type_6.c)
+
 
 ## Memory manipulation
 
