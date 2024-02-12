@@ -357,6 +357,14 @@ Video: https://www.youtube.com/watch?v=RG7D2_pay0U
 File: [data_type_6.c](files/data_type_6.c)
 
 
+### Difference between macros and constants
+
+Macros are processed before compilation. Their value is literally replaced in the source code as if its like a text editor is replacing them.
+
+Video: https://www.youtube.com/watch?v=TfJHlez7bek
+File: [data_type_7.c](files/data_type_7.c)
+
+
 ## Memory manipulation
 
 Functions (all work on arrays):
