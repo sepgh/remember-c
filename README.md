@@ -203,6 +203,8 @@ Intro to `size_t`:
 
 > size_t is a special unsigned integer type defined in the standard library of C and C++ languages. It is the type of the result returned by the sizeof and alignof operators. The size_t is chosen so that it can store the maximum size of a theoretically possible array or an object.
 
+Video for `size_t`: https://www.youtube.com/watch?v=gWOeL1oymrc
+
 Intro to `realloc`, which gets a pointer and allocates a chunk of memory to it again. It may return a new pointer, since it may not just simply be able to expand the memory and have to move it.
 
 
@@ -230,7 +232,7 @@ File: [array_2.c](files/array_2.c)
 
 ## Void pointer
 
-Imagine we have a function that takes in "an int array" and "int of length of the array" to represent eatch array element in hex format. How can we modify this function to accept other types like `long long` or `short` instead of only `int array`.
+Imagine we have a function that takes in "an int array" and "int of length of the array" to represent each array element in hex format. How can we modify this function to accept other types like `long long` or `short` instead of only `int array`.
 
 Video: https://www.youtube.com/watch?v=k3DbBOZRvRs
 
@@ -342,6 +344,11 @@ File: [data_type_5.c](files/data_type_5.c)
 If for optimizing loop index we choose a type which may overflow or underflow during the loop then we will enter an infinite loop.
 
 Video: https://www.youtube.com/watch?v=uZf_5JQXoU8
+
+
+### Generic data type
+
+(Checkout 'Void pointer' section first)
 
 
 ## Memory manipulation
