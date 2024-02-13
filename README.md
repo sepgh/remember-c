@@ -32,6 +32,43 @@ File: [binary_conversion.c](files/binary_conversion.c)
 [Hex to decimal](https://www.youtube.com/watch?v=pg-HEGBpCQk)
 
 
+### Header files
+
+__note__: `#inclue <something.h>` works for external files and `#include "something.h"` works for local project files.
+
+In a single compilation unit, all c files are compiled, so you can use a function from another c file in the file with `main` method. But then if you use `#include 'util.c'` it will try act as copying the content of that file into your current file, and as a result the function will be declared twice which results as a problem.
+
+Header files only contain _signature_ of declaraions such as functions. Therefore when they are included in another file, they only define signature of functions and not implement them. This is the difference between declare and define. Declare means the signature is there, define means the implementation is there. Example:
+
+```c
+//Declare:
+void func(int a);
+
+//Define
+void func(int a){
+    return a + 1;
+}
+```
+
+#### Pragma once
+
+You may see/use `#pragma once` or below code in a header file:
+
+```c
+#ifndef SOMEFILE_H
+#define SOMEFILE_H
+
+// code (declarations) here
+
+#endif
+```
+
+This prevents the file to be redeclared, or better say this file will only be included once.
+
+
+Video: https://www.youtube.com/watch?v=u1e0gLoz1SU
+
+
 ### Macros
 
 Readings:  https://stackoverflow.com/questions/1358232   https://stackoverflow.com/questions/66618214/
