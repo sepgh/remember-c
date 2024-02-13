@@ -69,6 +69,11 @@ This prevents the file to be redeclared, or better say this file will only be in
 Video: https://www.youtube.com/watch?v=u1e0gLoz1SU
 
 
+#### Sharing functions between C files
+
+Video: https://www.youtube.com/watch?v=8tRQ96W4g84
+
+
 ### Macros
 
 Readings:  https://stackoverflow.com/questions/1358232   https://stackoverflow.com/questions/66618214/
