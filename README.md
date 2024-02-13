@@ -34,6 +34,8 @@ File: [binary_conversion.c](files/binary_conversion.c)
 
 ### Macros
 
+Readings:  https://stackoverflow.com/questions/1358232   https://stackoverflow.com/questions/66618214/
+
 Video: https://www.youtube.com/watch?v=JqN4uVgCTWE
 
 
