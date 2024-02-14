@@ -429,6 +429,24 @@ Can use `scanf`, but also `fgets` which accepts 3 parameters:
 
 Video: https://www.youtube.com/watch?v=Lksi1HEMZgY
 
+
+### Printing a struct memory to console
+
+Example code:
+
+```c
+unsigned char data;
+    for (i = 0; i < sizeof(t); i++) {
+        if (i % 4 == 0) {
+            printf("\n");
+        }
+        data = *(((unsigned char*) &t) + i);
+        printf("%02x ", data);
+    }
+```
+
+Video: https://www.youtube.com/watch?v=a3ropbfIpw4
+
 ## Memory manipulation
 
 Functions (all work on arrays):
