@@ -447,6 +447,30 @@ unsigned char data;
 
 Video: https://www.youtube.com/watch?v=a3ropbfIpw4
 
+
+### Printf variants
+
+Examples:
+
+- `sprintf(buff, format string, args)`, example `sprintf(buf, "Example\n");`: writes the formatted value into the buffer input (`char buffer[200]`)
+- `snprintf(buff, max, format string, args)`: which accepts the maximum size to write into buffer, in case format string is longer than buffer
+- `fprintf(stream, format string, args)`: writes to a stream, like a file or `stdout` or `stderr`
+- `fprintf_s(stream, format string, args)`: safer version, checks for NULL in args to prevent crash
+- `fwprintf_s(stream, format string, args)`: uses wide char for fstring
+- `vfprintf_s(stream, format string, list_args)`: accepts list of args (`va_list` type)
+
+Actually these are prefixes before `printf` func:
+
+- `s` buffer
+- `n` buffer size
+- `f` stream (file)
+- `_s` safer version
+- `w` wide char
+- `v` var args list (va_list)
+
+Video: https://www.youtube.com/watch?v=VA22ESilQO0
+
+
 ## Memory manipulation
 
 Functions (all work on arrays):
