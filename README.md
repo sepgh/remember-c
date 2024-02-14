@@ -427,6 +427,7 @@ Can use `scanf`, but also `fgets` which accepts 3 parameters:
 2. how many characters we accept
 3. where do we read from, which could be a file or `stdin` to read from terminal input
 
+Video: https://www.youtube.com/watch?v=Lksi1HEMZgY
 
 ## Memory manipulation
 
