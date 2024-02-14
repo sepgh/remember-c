@@ -417,6 +417,17 @@ Video: https://www.youtube.com/watch?v=TfJHlez7bek
 File: [data_type_7.c](files/data_type_7.c)
 
 
+## File and Terminal IO
+
+### Reading input from terminal
+
+Can use `scanf`, but also `fgets` which accepts 3 parameters: 
+
+1. the string we want to write into
+2. how many characters we accept
+3. where do we read from, which could be a file or `stdin` to read from terminal input
+
+
 ## Memory manipulation
 
 Functions (all work on arrays):
