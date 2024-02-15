@@ -471,6 +471,12 @@ Actually these are prefixes before `printf` func:
 Video: https://www.youtube.com/watch?v=VA22ESilQO0
 
 
+### Binary representation of an Integer  (print in binary)
+
+Video: https://youtu.be/Kj3iboADvUc?si=wuCvCqibsh07-uA-
+File: [io_1.c](files/io_1.c)
+
+
 ## Memory manipulation
 
 Functions (all work on arrays):
@@ -493,3 +499,4 @@ Files: [memory_manipulation.c](files/memory_manipulation.c)  [memory_manipulatio
 
 - (Binary Numbers and Data Representation)[https://www.youtube.com/playlist?list=PLbtzT1TYeoMgzLyE9n-pJrTFZX18EUKw_]
 - (Code Vault)[https://code-vault.net]
+- (Signed representation of binary numbers)[https://youtu.be/-CEJXDeDsAQ?si=OeG2PcYKywU-uU9q&t=692]
