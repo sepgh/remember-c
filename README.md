@@ -486,3 +486,10 @@ Files: [memory_manipulation.c](files/memory_manipulation.c)  [memory_manipulatio
 
 
 
+---
+
+
+## Resources (+Additional)
+
+- (Binary Numbers and Data Representation)[https://www.youtube.com/playlist?list=PLbtzT1TYeoMgzLyE9n-pJrTFZX18EUKw_]
+- (Code Vault)[https://code-vault.net]
