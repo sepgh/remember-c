@@ -483,7 +483,7 @@ File: [io_1.c](files/io_1.c)
 
 In short, we use `FILE* out` to create a file pointer, and then using `fopen` or `fopen_s` we assign a handler to it. Then using `fwrite` function we can write a string buffer into that handler. To fill the buffer we can choose from _Printf variants_, like `sprintf_s`. Using `fclose` we can close the file.
 
-File: [io_2.c](files/io_2.c)
+File: [io_2.c](io_2.c)
 Video: https://www.youtube.com/watch?v=da9D4Bcsrgc
 
 The example file writes binary data into a file. Although, its only a string.
@@ -492,14 +492,14 @@ The example file writes binary data into a file. Although, its only a string.
 
 The handler needs to be called with `wb` flag, of course. Example: `fopen("point.bin", "wb")`
 
-File: [io_4.c](files/io_4.c)
+File: [io_4.c](io_4.c)
 Video: https://www.youtube.com/watch?v=P-fWNCF7Wx8
 
 #### Read (basics)
 
 Pretty much like write in terms of opening and closing. We use `fgets` to read file content into a buffer. We can then use `sscanf` to format the buffer.
 
-File: [io_3.c](files/io_3.c)
+File: [io_3.c](io_3.c)
 Video: https://www.youtube.com/watch?v=k3gSBljW-OE
 
 
@@ -507,16 +507,8 @@ Video: https://www.youtube.com/watch?v=k3gSBljW-OE
 
 Like normal reading but with `rb` flag. We can use `fread_s` to read binary data from the file. In the example, we pass the address of `p2` to `fread_s` which is a Point struct so the binary data is written there!
 
-File: [io_5.c](files/io_5.c)
+File: [io_5.c](io_5.c)
 Video: https://www.youtube.com/watch?v=dDjfaA9Q3n8
-
-
-#### Read/Write improvements
-
-Using `fprintf` and `fscanf` to reduce the need of extra buffers. Also using `w+` flag to open the file.
-
-File: [io_6.c](files/io_6.c)
-Video: https://www.youtube.com/watch?v=COypelJNUYY
 
 
 ## Memory manipulation
