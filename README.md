@@ -488,6 +488,11 @@ Video: https://www.youtube.com/watch?v=da9D4Bcsrgc
 
 The example file writes binary data into a file. Although, its only a string.
 
+#### Write in binary:
+
+The handler needs to be called with `wb` flag, of course. Example: `fopen("point.bin", "wb")`
+
+
 
 #### Read (basics)
 
