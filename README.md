@@ -492,7 +492,8 @@ The example file writes binary data into a file. Although, its only a string.
 
 The handler needs to be called with `wb` flag, of course. Example: `fopen("point.bin", "wb")`
 
-
+File: [io_4.c](io_4.c)
+Video: https://www.youtube.com/watch?v=P-fWNCF7Wx8
 
 #### Read (basics)
 
