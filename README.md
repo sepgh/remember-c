@@ -479,14 +479,22 @@ File: [io_1.c](files/io_1.c)
 
 ### File IO
 
-### Write
+#### Write (basics)
 
 In short, we use `FILE* out` to create a file pointer, and then using `fopen` or `fopen_s` we assign a handler to it. Then using `fwrite` function we can write a string buffer into that handler. To fill the buffer we can choose from _Printf variants_, like `sprintf_s`. Using `fclose` we can close the file.
 
 File: [io_2.c](io_2.c)
 Video: https://www.youtube.com/watch?v=da9D4Bcsrgc
 
-The example file writes binary data into a file.
+The example file writes binary data into a file. Although, its only a string.
+
+
+#### Read (basics)
+
+Pretty much like write in terms of opening and closing. We use `fgets` to read file content into a buffer. We can then use `sscanf` to format the buffer.
+
+File: [io_3.c](io_3.c)
+Video: https://www.youtube.com/watch?v=k3gSBljW-OE
 
 
 ## Memory manipulation
