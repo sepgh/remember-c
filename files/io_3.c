@@ -14,6 +14,7 @@ int main(int argc, char* argv[]) {
     Point p1 = {
         .x = 12, .y=20
     };
+    Point p2 = {};
 
     FILE* in;
     FILE* out;
