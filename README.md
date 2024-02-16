@@ -503,6 +503,14 @@ File: [io_3.c](io_3.c)
 Video: https://www.youtube.com/watch?v=k3gSBljW-OE
 
 
+#### Read in binary
+
+Like normal reading but with `rb` flag. We can use `fread_s` to read binary data from the file. In the example, we pass the address of `p2` to `fread_s` which is a Point struct so the binary data is written there!
+
+File: [io_5.c](io_5.c)
+Video: https://www.youtube.com/watch?v=dDjfaA9Q3n8
+
+
 ## Memory manipulation
 
 Functions (all work on arrays):
