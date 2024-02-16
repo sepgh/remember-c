@@ -477,6 +477,18 @@ Video: https://youtu.be/Kj3iboADvUc?si=wuCvCqibsh07-uA-
 File: [io_1.c](files/io_1.c)
 
 
+### File IO
+
+### Write
+
+In short, we use `FILE* out` to create a file pointer, and then using `fopen` or `fopen_s` we assign a handler to it. Then using `fwrite` function we can write a string buffer into that handler. To fill the buffer we can choose from _Printf variants_, like `sprintf_s`. Using `fclose` we can close the file.
+
+File: [io_2.c](io_2.c)
+Video: https://www.youtube.com/watch?v=da9D4Bcsrgc
+
+The example file writes binary data into a file.
+
+
 ## Memory manipulation
 
 Functions (all work on arrays):
