@@ -518,6 +518,21 @@ Using `fprintf` and `fscanf` to reduce the need of extra buffers. Also using `w+
 File: [io_6.c](files/io_6.c)
 Video: https://www.youtube.com/watch?v=COypelJNUYY
 
+### fseek
+
+Using fseek we can move the cursor where we start reading/writing into a file.
+
+
+### getc, getch, getche and getchar
+
+These function reads a single character from console input.
+
+- `getch` doesnt print the character to the console. Returns an int so it can store `EOF`. Not a C standard function, and only compatibel with Windows. Also, no enter needed to send the character into console.
+- `getche` is same as `getch` but prints the character to console.
+- `getc` expects enter to be pressed. Its a macro on some platforms.
+- `getchar` equal to getc but works with `stdin` by default.
+- `fgetc` is like `getc` but its a function and not a macro.
+
 
 ## Memory manipulation
 
