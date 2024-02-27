@@ -588,6 +588,19 @@ Video: https://www.youtube.com/watch?v=ypG9W33LOTk
 Files: [memory_manipulation.c](files/memory_manipulation.c)  [memory_manipulation_2.c](files/memory_manipulation_2.c)  [memory_manipulation_3.c](files/memory_manipulation_3.c)  [memory_manipulation_4.c](files/memory_manipulation_4.c) 
 
 
+### Memory allocaction
+
+`malloc` allocates memory for given size and returns `void*` to the initial byte of the allocated memory. **important:** `malloc` DOES NOT set the memory to 0; In fact the allocated memory may have some values in it since `free()` only tells OS to let go of a memory for the process and doesn't tell it to set it to 0. `malloc` needs a check if returned pointer is NULL.
+
+Using `memset` we can set everything to something (example `0`), for example the result of the `malloc`.
+
+Alternatively we can allocate an array using `calloc` and it'll create an array with initial values of `0`.
+
+`realloc` can be used to shrink/expand allocated memory. Lets say we `malloc`'d 256 bytes and organized some values to take only `64` byte. Instead of allocating a new 64 byte memory and move/copy the organized memory there we can shring the already allocated 256 bytes of memory. **important**: `realloc` may have to move the data to somewhere else, therefore it returns a new pointer. We can do something like `p = realloc(p, 64 * sizeof(int))` so our previous pointer will eventually point to the new location in case `realloc` moved the data. It still needs a check if returned pointer is NULL.
+
+
+
+
 
 ---
 
