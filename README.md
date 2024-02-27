@@ -552,6 +552,13 @@ This behavior can change by using `#pragma pack(1)` _before the line you want th
 Video: https://www.youtube.com/watch?v=8wHoI-6R0CQ
 
 
+#### Additional on memory paddings:
+
+Processor doesn't read 1 byte at time from memory. It reads 1 "word" at a time. A word for 32 bit processor is 4 bytes for example.
+
+Additional video: https://www.youtube.com/watch?v=aROgtACPjjg
+
+
 ### add or subtract two pointers
 
 Giving
