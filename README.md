@@ -552,6 +552,21 @@ This behavior can change by using `#pragma pack(1)` _before the line you want th
 Video: https://www.youtube.com/watch?v=8wHoI-6R0CQ
 
 
+### add or subtract two pointers
+
+Giving
+
+```c
+long long c[] = {1,2,3};
+```
+
+  a pointer like `long long* p = c + 1` gets the address of c and **adds 1 times of `sizeof(type of c)`. So `c + 1` doesn't add just one byte to the address, but 8 bytes in this case.
+
+General rule: pointer arithmetics are done at the size of the pointer type.
+
+Note: in stack, the pointer value of a variable that is defined last is lower than the one that is defined first. While in heap this may not be true.
+
+
 ### Memory manipulation
 
 Functions (all work on arrays):
