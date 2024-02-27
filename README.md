@@ -337,6 +337,9 @@ int main(int argc, char* argv[]) {
 }
 ```
 
+**Important note:** even though struct is usually stored in a contiguous memory, the value of `sizeof(structInstance)` may not be equal to the sum of the struct attributes.
+This has to do with memory padding.
+
 ### Return and pass a struct to a function
 
 1. Passing struct to a function is pass-by-value (copy), which is not optimized.
@@ -534,7 +537,22 @@ These function reads a single character from console input.
 - `fgetc` is like `getc` but its a function and not a macro.
 
 
-## Memory manipulation
+## Pointers and Memory management
+
+
+### Memory paddings
+
+Padding is something that is used to add a couple of bytes to the memory allocate so that the CPU can get it in a much faster way and in some cases don't give out errors.
+
+The compiler tries to align every single address of every single element (element of a struct in this example) at 8 bytes. Because we dont want an element (a pointer for instance) to start in a 64 bit of a memory and end in another one, because while it may be more memory efficient, the CPU has to do more work by taking one byte into CPU and then another one and make them up together in order to find the value of that pointer. But when its aligned in the CPU architecture then it'll be easier.
+
+This behavior can change by using `#pragma pack(1)` _before the line you want the alignment to start changing_. It basically says align everything at 1 byte, which means don't align anything. But you can also use this to align things for other CPU architectures. So for example `#pragma pack(1)` can act like 32bit architecture alignment.
+
+
+Video: https://www.youtube.com/watch?v=8wHoI-6R0CQ
+
+
+### Memory manipulation
 
 Functions (all work on arrays):
 
