@@ -599,7 +599,11 @@ Alternatively we can allocate an array using `calloc` and it'll create an array 
 `realloc` can be used to shrink/expand allocated memory. Lets say we `malloc`'d 256 bytes and organized some values to take only `64` byte. Instead of allocating a new 64 byte memory and move/copy the organized memory there we can shring the already allocated 256 bytes of memory. **important**: `realloc` may have to move the data to somewhere else, therefore it returns a new pointer. We can do something like `p = realloc(p, 64 * sizeof(int))` so our previous pointer will eventually point to the new location in case `realloc` moved the data. It still needs a check if returned pointer is NULL.
 
 
+### Pointer declarion quirks
 
+To declare multiple pointers in same line, doing this is wrong: `int* a, b` and makes `b` just an `int` and not a pointer. Doing this is right: `int *a, *b`.
+
+`char* str[20]` creates 20 character pointers.
 
 
 ---
