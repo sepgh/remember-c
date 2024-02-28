@@ -606,6 +606,18 @@ To declare multiple pointers in same line, doing this is wrong: `int* a, b` and 
 `char* str[20]` creates 20 character pointers.
 
 
+### Function pointers
+
+To declare a function pointer we use something like: `{RETURN TYPE} (*{POINTER NAME})({ARG 1 TYPE}, {ARG 2 TYPE})`, for example: `long long (*func)(int, int)` would be a pointer named `func` to a function that returns `long long` and has 2 arguments both of type `int`.
+
+To make the pointer point to a function we can do `{POINTER NAME} = &{FUNCTION NAME}` like `func = &sum` where `func` is the pointer name and `sum` is name of the function.
+
+The notation (`{RETURN TYPE} (*{POINTER NAME})({ARG 1 TYPE}, {ARG 2 TYPE})`) can be used as a function argument itself, for passing a function to another function.
+
+
+file: [memory_management.c](files/memory_management.c)
+video: https://www.youtube.com/watch?v=cwvdT-4HT9o
+
 ---
 
 
