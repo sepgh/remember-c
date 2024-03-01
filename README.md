@@ -643,6 +643,12 @@ file: [memory_management_2.c](files/memory_management_2.c)
 video: https://www.youtube.com/watch?v=txf92femaGM
 
 
+### Difference between memmove and memcpy
+
+`memmove` is safe to use when you have overlapping memory between the source and destination. It will first copy the source into a buffer and then replace the destination. But `memcpy` is not safe _(in some compilers)_ for copying overlapping memory since it doesn't first copy the memory into a buffer.
+
+video: https://www.youtube.com/watch?v=nFl1cNXk85s
+
 ---
 
 
