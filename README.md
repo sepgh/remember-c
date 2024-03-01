@@ -98,6 +98,13 @@ Video: https://www.youtube.com/watch?v=ly66E_LGubk
 File: [string_2.c](files/string_2.c) 
 
 
+### String storage
+
+Strings are usually neither stored on heap or stack. They are stored in [Data Segments](https://en.wikipedia.org/wiki/Data_segment). Later we will see that creating a variable within a function and returning it, or pointing a pointer to a new variable within functions may not work on some data types, such as arrays (check [Arrays > Returning an array from a function] section). But that doesn't apply to strings even though you may think its just a char array.
+
+[More info](https://stackoverflow.com/questions/4970823/)
+
+
 ### String copy
 
 Functions used: `strcpy` and `strncpy`
