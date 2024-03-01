@@ -686,6 +686,17 @@ int main(int argc, char* argv[]) {
 
 _Why to use double pointer at all?_ The nice part of it is that you can change the value we are pointing at.
 
+
+### Why is it useful to hexadecimal to represent memory
+
+Since hexadecimal is 2 to the power of 4, and binary is base 2, we can easily imagine representation of a hexadecimal number by extracting each digit and representing it as binary.
+
+For example:
+
+- Binary representation of number 23 is `00010111`
+- The hexadecimal value is `17`
+- Extract each digit of hexadecimal value, so we have `{1, 7}` and represent each digit as binary, so we have: `{0001, 0111}`, and merge them together to have a single byte: `00010111`.
+
 ---
 
 
