@@ -649,6 +649,34 @@ video: https://www.youtube.com/watch?v=txf92femaGM
 
 video: https://www.youtube.com/watch?v=nFl1cNXk85s
 
+
+### Double pointer (or more!)
+
+They are just pointers to another pointer. We can derefrence them using a single astrick.
+
+Example:
+
+```c
+void display(char********* output) {
+    printf("%s\n", *output);
+}
+
+int main(int argc, char* argv[]) {
+    char* str = "This is a test";
+    char** str2 = &str;
+    char*** str3 = &str2;
+    char**** str4 = &str3;
+    char***** str5 = &str4;
+    char****** str6 = &str5;
+    char******* str7 = &str6;
+    char******** str8 = &str7;
+    char********* str9 = &str8;
+    
+    display(str9);
+    return 0;
+}
+```
+
 ---
 
 
