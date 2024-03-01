@@ -652,7 +652,7 @@ video: https://www.youtube.com/watch?v=nFl1cNXk85s
 
 ### Double pointer (or more!)
 
-They are just pointers to another pointer. We can derefrence them using a single astrick.
+They are just pointers to another pointer. We can derefrence them (get the value) using a astricks, and you need (N-1) astricks where N is number of pointers.
 
 Example:
 
@@ -676,6 +676,8 @@ int main(int argc, char* argv[]) {
     return 0;
 }
 ```
+
+_Why to use double pointer at all?_ The nice part of it is that you can change the value we are pointing at.
 
 ---
 
