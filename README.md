@@ -618,6 +618,12 @@ The notation (`{RETURN TYPE} (*{POINTER NAME})({ARG 1 TYPE}, {ARG 2 TYPE})`) can
 file: [memory_management.c](files/memory_management.c)
 video: https://www.youtube.com/watch?v=cwvdT-4HT9o
 
+
+### Pointer address of an array
+
+Considering we have `char str[20] = "Example string";`, to get the pointer to the beginning of the variable, our best choice can be `str` or `&str[0]`. If we -_wrongly_- use `&str`, our pointer arithmetics will be messed with, since `str + 1` or `&str[0] + 1` will return address of the second element, but `&str + 1` will return address of `20 + 1` memory after the first element (not that the size of `str` is `20`). 
+
+
 ---
 
 
