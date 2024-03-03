@@ -698,6 +698,18 @@ For example:
 - Extract each digit of hexadecimal value, so we have `{1, 7}` and represent each digit as binary, so we have: `{0001, 0111}`, and merge them together to have a single byte: `00010111`.
 
 
+## Operators
+
+### bit-shift operation
+
+- `Left shift`
+
+It takes a binary number and moves it to left for one bit (filling the remaining with 0). So if `int a = 5` and 5 is `0101` in binary, `a << 1` will result in: `1010` which is 10. Doing it again gives us 20, 40, 80, ...  so all in all it multiplies a number by 2. If we shift too much, the binary numbers can disapear and get out of boundry and can even go over the sign bit and make the number negative.
+
+- `Right shift`
+
+Same thing happens with right shift. The number will be devided by 2. **The right shift takes a look at sign bit** and fills the shifted bits with sign bit (in most compilers).
+
 ## UNIX
 
 - [Process](unix/UNIX_PROCESS.md)
