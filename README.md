@@ -727,6 +727,28 @@ It takes a binary number and moves it to left for one bit (filling the remaining
 
 Same thing happens with right shift. The number will be devided by 2. **The right shift takes a look at sign bit** and fills the shifted bits with sign bit (in most compilers).
 
+### Bitwise operators
+
+Well they simply apply `and`/`or`/`xor`/`not` operations at bit level!
+
+```
+5   ->   0 1 0 1
+9   ->   1 0 0 1
+
+5&9 ->   0 0 0 1   -> 1
+5|9 ->   1 1 0 1   -> 13
+5^9 ->   1 1 0 0   -> 12   (XOR)
+```
+
+```
+5   ->   0 1 0 1
+~5  ->   1 0 1 0
+
+9   ->   1 0 0 1
+~9  ->   0 1 1 0 
+```
+
+
 ## UNIX
 
 - [Process](unix/UNIX_PROCESS.md)
