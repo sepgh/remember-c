@@ -698,6 +698,20 @@ For example:
 - Extract each digit of hexadecimal value, so we have `{1, 7}` and represent each digit as binary, so we have: `{0001, 0111}`, and merge them together to have a single byte: `00010111`.
 
 
+### const
+
+I already understand const. The only note: The valid way to use it for a pointer is to use it after the pointer:
+
+```c
+int * const x = &n;
+```
+
+The code below is a pointer to a constant int:
+
+```c
+const int *x;
+```
+
 ## Operators
 
 ### bit-shift operation
