@@ -698,6 +698,9 @@ For example:
 - Extract each digit of hexadecimal value, so we have `{1, 7}` and represent each digit as binary, so we have: `{0001, 0111}`, and merge them together to have a single byte: `00010111`.
 
 
+Video: https://www.youtube.com/watch?v=lvjW-aUcbF0
+file: [operators_1.c](files/operators_1.c)
+
 ### const
 
 I already understand const. The only note: The valid way to use it for a pointer is to use it after the pointer:
