@@ -748,6 +748,22 @@ Well they simply apply `and`/`or`/`xor`/`not` operations at bit level!
 ~9  ->   0 1 1 0 
 ```
 
+#### Practical example: flag system
+
+If we assume we want to store 32 flags in a single int, since an int has 32 bits then we can use each bit as a on/off flag.
+
+If we want to see the "first" flag is "ON/true", we can do a bitwise & operation of the number with `1` and assure its not 0;
+Or generally:
+
+> If we want to see the nth flag is "ON/true", we can do a bitwise & operation of the number with n in binary and assure its not 0;
+
+Additionally, to enable flags on the `int` number we had, we can use bitwise or operation between binary representation of numbers to turn on those flags (bits): `unsigned int flag = 0b1 | 0b10 | 0b1001`.
+
+The code example explains it even better.
+
+file: [operators_2.c](files/operators_2.c)
+video: https://www.youtube.com/watch?v=6hnLMnid1M0
+
 
 ## UNIX
 
