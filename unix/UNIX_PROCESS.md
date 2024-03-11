@@ -49,3 +49,15 @@ Video: https://www.youtube.com/watch?v=tcYo6hipaSA
 
 Side note: `fflush(stdout)` will flush the output buffer into standard output, which is useful especially when there are forks involved.
 
+
+
+## Process Id
+
+- `getpid()` returns current process id.
+- `getppid()` returns parent process id. Every process (even main) has a parent process in the system.
+
+> In any program that uses fork we have to make sure to stop or wait for the termination of child processes before exiting parent process or we may create memory leaks.
+
+> We can check output of  `wait(NULL)` and if its `-1` then there are no processes to wait for.
+
+Video: https://www.youtube.com/watch?v=PZrQ4eGm-hM
