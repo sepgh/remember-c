@@ -39,13 +39,13 @@ Video: https://www.youtube.com/watch?v=cex9XrZCU14
 Each process have their own space in the memory. When you call fork anything that was stored in the memory before the call to fork will be copied to the new subprocess. Therefore, anything that is stored in the memory after the fork call is placed in different places of memory for each process.
 
 
-### Fork - Wait
+### Fork - Wait  (sys/wait.h)
 
-To wait for a child process to exit we can use `wait()` function.
+To wait for a child process to exit we can use `wait()` function. The wait function waits for ONLY ONE of the children to finish.
 
 File: [unix_process_3.c](../files/unix/unix_process_3.c)
 Video: https://www.youtube.com/watch?v=tcYo6hipaSA
-
+ 
 
 Side note: `fflush(stdout)` will flush the output buffer into standard output, which is useful especially when there are forks involved.
 
@@ -61,3 +61,16 @@ Side note: `fflush(stdout)` will flush the output buffer into standard output, w
 > We can check output of  `wait(NULL)` and if its `-1` then there are no processes to wait for.
 
 Video: https://www.youtube.com/watch?v=PZrQ4eGm-hM
+
+
+## Waiting for all processes to finish
+
+We need to include `<errno.h>`.
+
+Syntax would become: `while(wait(NULL) != -1 || errno != ECHILD);`
+
+
+File: [unix_process_4.c](../files/unix/unix_process_4.c)
+Video: https://www.youtube.com/watch?v=94URLRsjqMQ
+
+> A common good practice is to start new child process only from the most parent process
