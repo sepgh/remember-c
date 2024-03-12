@@ -74,3 +74,15 @@ File: [unix_process_4.c](../files/unix/unix_process_4.c)
 Video: https://www.youtube.com/watch?v=94URLRsjqMQ
 
 > A common good practice is to start new child process only from the most parent process
+
+
+## Pipe
+
+`pipe` function requires an array of two integers to store "File descriptiors" into. The descriptor at index 1 is to write into and the one at index 0 is to read from. After writing or reading to/from each of the files we have to close them. The function can be used for communicating between processes. The function returns 0 if its successful or -1 if it fails.
+
+
+File: [unix_process_5.c](../files/unix/unix_process_5.c)
+Video: https://www.youtube.com/watch?v=Mqb2dVRe0uo
+
+
+
