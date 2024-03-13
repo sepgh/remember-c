@@ -85,4 +85,13 @@ File: [unix_process_5.c](../files/unix/unix_process_5.c)
 Video: https://www.youtube.com/watch?v=Mqb2dVRe0uo
 
 
+### Fork and Pipe practical example
+
+Basically using fork we can distribute the processing into different parallel processes, and using pipe we can gather processed information from subprocesses.
+
+In the code and video example below, we `sum` an array using two subprocesses.
+
+File: [unix_process_6.c](../files/unix/unix_process_6.c)
+Video: https://www.youtube.com/watch?v=6u_iPGVkfZ4
+
 
