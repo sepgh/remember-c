@@ -95,3 +95,23 @@ File: [unix_process_6.c](../files/unix/unix_process_6.c)
 Video: https://www.youtube.com/watch?v=6u_iPGVkfZ4
 
 
+## FIFO (named pipe)
+
+FIFO is a especial file which is used like a pipe for process communications. Unlike pipe, it can be used for communication between processes that are not in same hirarchy (not a parent child process). To use it we need `<fcntl.h>` and `<errno.h>` included, as well as `unistd` like before.
+
+To use FIFO, we should first create one using `mkfifo(PATH, PERMISSION)` command like `mkfifo("/temp/something", 0777)`. If the output of this command is -1 then something went wrong. We can use `errno` and compare it with `EEXIST` to see if the fifo file is created or not.
+
+```c
+if (mkfifo("myfifo1", 0777) == -1) {
+    if (errno != EEXIST) {
+        printf("Could not create fifo file\n");
+        return 1;
+    }
+}
+```
+
+Afterwards, we should treat the file like a normal file! In the process that we want to write into the file we should `open` it with `O_WRONLY` flag. This function call will become "blocking" in that case. The current execution line will wait for another process to open the file to read from it. Afterwards, whatever is written into the file will come out from the reading process. The reading process can simply even be linux `cat` command.
+
+
+File: [unix_process_7.c](../files/unix/unix_process_7.c)
+Video: https://www.youtube.com/watch?v=2hba3etpoJg
