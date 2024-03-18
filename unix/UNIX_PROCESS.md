@@ -147,3 +147,28 @@ int main(int argc, char* argv[]) {
     return 0;
 }
 ```
+
+
+## Get Error code from exec
+
+If exec functions themselves fail the function will return -1. But what if the command we are executing returns error?
+
+In the code above, if instead of `NULL` we pass address of an integer to `wait` function we can get the exit status code. So in parent process:
+
+```c
+int wstatus;
+wait(&wstatus);
+if (WIFEXTED(wstatus)){  // check if program was not just killed
+    int statusCode = WEXITSTATUS(wstatus);
+    if (statusCode == 0){
+        //success
+    }else{
+        //err
+    }
+}
+```
+
+Video: https://www.youtube.com/watch?v=DiNmwwQWl0g
+
+
+
