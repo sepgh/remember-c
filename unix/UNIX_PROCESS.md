@@ -171,4 +171,20 @@ if (WIFEXTED(wstatus)){  // check if program was not just killed
 Video: https://www.youtube.com/watch?v=DiNmwwQWl0g
 
 
+## Redirecting standard output
+
+First, lets note few things about File Handles / Descriptors:
+
+> A file descriptor is an int (for example returned by `open()`) which is a key that OS will keep for **each process** to remember which file to modify/read from when that descriptor is used.
+
+> Additionally, when any new process spawns, the STDIN and STDOUT (and STDERR) descriptors are opened for the process, with ids 0, 1, 2 (USUALLY). So new handles get 4,5, ...
+
+So the whole trick here is to replace `STDOUT` descriptor to point to another descriptor.
+
+The function `dup(int handle)` duplicates a handle to a file (same file as the input). Function `dup2(source, destination)` duplicates the source handle into destination. So `dup2(file, STDOUT_FILENO)` would replace STDOUT with the file we are passing the handle of as source.
+
+
+File: [unix_process_8.c](../files/unix/unix_process_8.c)
+Video: https://www.youtube.com/watch?v=5fnVr-zH-SE
+
 
