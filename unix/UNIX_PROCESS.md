@@ -148,6 +148,8 @@ int main(int argc, char* argv[]) {
 }
 ```
 
+**IMPORTANT**:  exec functions do not act like shell/bash. You cant use grep or pipe (`|`) or such things in the arguments. It's directly passing arguments to the executable.
+
 
 ## Get Error code from exec
 
