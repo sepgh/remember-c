@@ -190,3 +190,12 @@ File: [unix_process_8.c](../files/unix/unix_process_8.c)
 Video: https://www.youtube.com/watch?v=5fnVr-zH-SE
 
 
+## Signals
+
+We can use `kill(PROCESS_ID, SIGNAL)` to send signal to another process. Example: `kill(pid, SIGKILL);`.
+
+- https://www-uxsup.csx.cam.ac.uk/courses/moved.Building/signals.pdf
+- https://man7.org/linux/man-pages/man7/signal.7.html
+
+Video: https://www.youtube.com/watch?v=5We_HtLlAbs
+
