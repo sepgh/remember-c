@@ -199,3 +199,17 @@ We can use `kill(PROCESS_ID, SIGNAL)` to send signal to another process. Example
 
 Video: https://www.youtube.com/watch?v=5We_HtLlAbs
 
+
+
+### Handling signals
+
+```c
+struct sigaction sa;
+sa.sa_handler = &handle_sigcont;   // address of a function> void func_name(int sig)
+//sa.sa_flags = SA_RESTART;  // optional. helps in case of stop signal after scannf
+sigaction(SIGCONT, &sa, NULL);
+```
+
+We cant handle some signals at all, like `SIGSTOP` or `SIGKILL`. `SIGTSTP` (notice the difference with `SIGSTOP`) however is used when terminal is stopping a program (putting it into background) which can be handled.
+
+Video: https://www.youtube.com/watch?v=jF-1eFhyz1U
