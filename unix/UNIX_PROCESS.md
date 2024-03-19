@@ -214,3 +214,84 @@ sigaction(SIGCONT, &sa, NULL);
 We cant handle some signals at all, like `SIGSTOP` or `SIGKILL`. `SIGTSTP` (notice the difference with `SIGSTOP`) however is used when terminal is stopping a program (putting it into background) which can be handled.
 
 Video: https://www.youtube.com/watch?v=jF-1eFhyz1U
+
+
+
+## Simulating the pipe "|" operator
+
+What the `|` (pipe) does in bash is that it takes the standard output of the left side of the operation and passes it as the standard input of the right side of the operation. The name comes from the `pipe` in C, and therefore if we use `pipe()` and `dup2` we can simulate the same thing. In one process, we dup the pipe `fd[1]` with `stdout` and in the other we duplicate the pipe `fd[0]` with `stdin`.  Code and explanation in comments:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+int main(int argc, char* argv[]) {
+    /* Creating the pipe and returning if it fails in main process */
+    int fd[2];
+    if (pipe(fd) == -1) {
+        return;
+    }
+    
+
+    /* Creating the first child process */
+    int pid1 = fork();
+    if (pid < 0) {
+        return 2;
+    }
+    
+    /* 
+        In the first child process, we duplicate the fd[1] with STDOUT
+        The reason for close(fd[0]) is that we don't use it.
+        The reason for close(fd[1]) is that we duplicated it and dup2 doesnt close it for us.
+        No "else" statement needed since subprocess will be attached to execlp
+    */
+    if (pid1 == 0) {
+        // Child process 1 (ping)
+        dup2(fd[1], STDOUT_FILENO);
+        close(fd[0]);
+        close(fd[1]);
+        execlp("ping", "ping", "-c", "5", "google.com", NULL);
+    }
+    
+
+    /* Creating the second child process */
+    int pid2 = fork();
+    if (pid2 < 0) {
+        return 3;
+    }
+    
+
+    /* 
+        In the second child process, we duplicate the fd[0] with STDIN
+        The reason for close(fd[0]) is that we duplicated it and dup2 doesnt close it for us.
+        The reason for close(fd[1]) is that we don't use it.
+    */
+    if (pid2 == 0) {
+        // Child process 2 (grep)
+        dup2(fd[0], STDIN_FILENO);
+        close(fd[0]);
+        close(fd[1]);
+        execlp("grep", "grep", "rtt", NULL);
+    }
+    
+    /* 
+        In parent process we don't use neither of the descriptors 
+        and since they are open the process won't exit cause grep would still run, thinking there is a process that still may write into the pipe
+    */
+    close(fd[0]);
+    close(fd[1]);
+    
+    /* wait for child processes to exit */
+    waitpid(pid1, NULL, 0);
+    waitpid(pid2, NULL, 0);
+    
+    return 0;
+}
+```
+
+Video: https://www.youtube.com/watch?v=6xbLgZpOBi8
+
