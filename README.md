@@ -768,7 +768,7 @@ video: https://www.youtube.com/watch?v=6hnLMnid1M0
 ## UNIX
 
 - [Process](unix/UNIX_PROCESS.md)
-- [Threads](unix/UNIX_THREADS.md)
+- [Threads](unix/UNIX_THREAD.md)
 ---
 
 
