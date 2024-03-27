@@ -17,6 +17,7 @@ Threads are part of `pthread.h` and also when using them we should compile the c
 - In the process before starting threads we initialize the mutex: `pthread_mutex_init(&mutex, NULL);`
 - In the process after threads finish we destroy the mutex: `pthread_mutex_destroy(&mutex, NULL);`
 - To use the mutex in the threads: `pthread_mutex_lock(&mutex);` to lock, `pthread_mutex_unlock(&mutex);` to unlock.
+- `pthread_mutex_trylock` function can be used as `try lock` mechanism which instead of blocking the tread till it locks the lock, it returns 0 if thread could aquire the lock.
 
 
 Code: [unix_thread_2.c](../files/unix/unix_thread_2.c)
