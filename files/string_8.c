@@ -16,6 +16,7 @@ int main(int argc, char *args[]){
 	// Also modifies the input (str) and adds "String terminator character" at each piece
 	char* piece = strtok(str, " ");
 	// now value of str is actually: "Let's\000break this string into pieces";
+	printf("current str value: %s \n\n", str);
 	printf("%s\n", piece);
 
 	piece = strtok(NULL, " ");
